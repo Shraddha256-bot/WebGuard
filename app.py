@@ -3,6 +3,16 @@ import joblib
 import pandas as pd
 from feature_extraction import extract_features
 
+# ---------------------- Branding Section ----------------------
+st.set_page_config(page_title="WebGuard - Fake Website Detector", page_icon="🛡️", layout="centered")
+
+# Display logo (make sure logo.png is in the same folder as app.py)
+st.image("logo.png", width=120)
+
+# Custom heading with style
+st.markdown("<h2 style='text-align: center; color: #2E8B57;'>WebGuard: Fake Website Detector</h2>", unsafe_allow_html=True)
+st.write("---")
+
 # ---------------------- Load Model ----------------------
 model_data = joblib.load("models/fake_site_final.pkl")
 scaler = model_data["scaler"]
